@@ -1,0 +1,43 @@
+nav a#pull{display:none;}
+/*Styles for screen 600px and lower*/
+@media screen and (max-width: 760px) {
+nav a#pull {
+	display:block;
+}	
+
+}
+
+/*Styles for screen 515px and lower*/
+@media only screen and (max-width : 480px) {
+
+	
+
+	nav a#pull {
+		display: block;	
+		width: 100%;
+		position: relative;
+		color:#fff;
+		text-decoration:none;
+	}
+	nav a#pull:after {
+		content:"";
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		position: absolute;
+		right: 15px;
+		top: 10px;
+	}
+}
+
+nav a#pull {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    float: right;
+    height: 30px;
+    margin: 5px 9px 5px 10px;
+    padding: 8px;
+    width: 35px;
+}
+nav a#pull span{background:#2ea3f2; display: block; float: left; height: 2px;margin:0 0 4px 0 ; width: 90%;}

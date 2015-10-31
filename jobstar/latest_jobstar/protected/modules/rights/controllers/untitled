@@ -1,0 +1,11 @@
+                    $chkImageUploaded = CUploadedFile::getInstancesByName('images');
+                    if(isset($chkImageUploaded) && count($chkImageUploaded) > 0) {
+                      //do nothing.... this is done only for validation
+                    } // if image is uploaded by admin
+                    else{
+                        //please select image
+                        Yii::app()->user->setFlash('imageErrMsg','Please upload image.');
+                         $this->render('create',array(
+                            'model'=>$model,
+                        ));
+                    }

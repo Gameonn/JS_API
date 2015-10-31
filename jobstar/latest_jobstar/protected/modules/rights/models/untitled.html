@@ -1,0 +1,85 @@
+<?php
+/* @var $this DocController */
+/* @var $model Doc */
+/* @var $form CActiveForm */
+?>
+
+<div class="wide form">
+
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'action'=>Yii::app()->createUrl($this->route),
+	'method'=>'get',
+)); ?>
+
+	<div class="row">
+		<?php echo $form->label($model,'id'); ?>
+		<?php echo $form->textField($model,'id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'userrole'); ?>
+		<?php echo $form->textField($model,'userrole',array('size'=>30,'maxlength'=>30)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'category_id'); ?>
+		<?php echo $form->textField($model,'category_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'country_id'); ?>
+		<?php echo $form->textField($model,'country_id',array('size'=>60,'maxlength'=>256)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'lang_id'); ?>
+		<?php echo $form->textField($model,'lang_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'title'); ?>
+		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>128)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'synopsis'); ?>
+		<?php echo $form->textArea($model,'synopsis',array('rows'=>6, 'cols'=>50)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'posting_date'); ?>
+		<?php echo $form->textField($model,'posting_date'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'external_link'); ?>
+		<?php echo $form->textField($model,'external_link',array('size'=>60,'maxlength'=>256)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'user_id'); ?>
+		<?php echo $form->textField($model,'user_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'filepath'); ?>
+		<?php echo $form->textField($model,'filepath',array('size'=>60,'maxlength'=>256)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'added_on'); ?>
+		<?php echo $form->textField($model,'added_on'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'select_type'); ?>
+		<?php echo $form->textField($model,'select_type',array('size'=>2,'maxlength'=>2)); ?>
+	</div>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton('Search'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- search-form -->

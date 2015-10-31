@@ -1,0 +1,44 @@
+              <?php 
+                Yii::app()->clientScript->registerScript('amount_'.$position,"
+          $('.amount_".$position."').keyup(function() {
+            $.ajax({
+              url:'".$this->createUrl('/shoppingCart/updateAmount')."',
+              data: $('#amount_".$position."'),
+              success: function(result) {
+              $('.amount_".$position."').css('background-color', 'lightgreen');
+              $('.widget_amount_".$position."').css('background-color', 'lightgreen');
+              $('.widget_amount_".$position."').html($('.amount_".$position."').val());
+              $('.price_".$position."').html(result); 
+              //$('.price_total').load('".$this->createUrl('//shop/shoppingCart/getPriceTotal')."');
+              },
+              error: function() {
+              $('#amount_".$position."').css('background-color', 'red');
+              },
+
+              });
+        });
+          ");
+          ?>
+
+
+
+          echo '<tr>
+            <td class="image"><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=reward/view&id=<?php echo $data[\'id\']; ?>"><img title="product" alt="product" src="<?php echo Yii::app()->request->baseUrl; ?>/images/reward/<?php echo $data[\'id\']; ?>/<?php echo $data[\'image\']; ?>" height="50" width="50"></a></td>
+            <td  class="name"><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=reward/view&id=<?php echo $data[\'id\']; ?>"><?php echo $data[\'title\']; ?></a></td>
+            <td class="quantity">
+              <div id="flash<?php echo $data[\'id\']; ?>"></div>
+              <input type="text" size="1" value="1" name="quantity<?php echo $data[\'id\']; ?>" id="quantity<?php echo $data[\'id\']; ?>" class="span1"><br/>
+              <input type="submit" value="Update" class="quantity_submit" id="<?php echo $data[\'id\']; ?>">
+               <!--<a href="#"><small>Update</small></a>--> | <!-- <a href="#"><small>Delete</small></a> -->
+               <input type="submit" value="Delete" class="delete_submit" id="<?php echo $data[\'id\']; ?>">
+
+
+
+
+              
+             
+             </td> <td class="price">$<?php echo $data[\'price\']; ?></td>
+            <td class="total">$<?php echo ($data[\'price\']*2); ?></td>
+             
+          </tr>
+          ';

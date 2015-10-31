@@ -1,0 +1,26 @@
+$getTags = $_POST['tags'];
+$mystring = $getTags;
+$findme   = ',';
+$pos = strpos($mystring, $findme);
+if ($pos === false) {
+    //echo "The string '$findme' was not found in the string '$mystring'";
+    //if that tag name already exist, skip that tag
+    $insertMultiDoc=Yii::app()->db->createCommand()->insert('tags',array(
+        'reward_id'=>$model->id,
+        'name'=>$getTags,
+         ));
+} else {
+    //echo "The string '$findme' was found in the string '$mystring'";
+    //echo " and exists at position $pos";
+    //explode with comma
+     $getTagArray = explode(',',$getTags);
+     //insert into tags table with reward model id.
+     foreach ($getTagArray as $tagKey => $tagVal) {
+        //if that tag name already exist, skip that tag
+        
+        $insertMultiDoc=Yii::app()->db->createCommand()->insert('tags',array(
+        'reward_id'=>$model->id,
+        'name'=>$tagVal,
+         ));
+    }
+}

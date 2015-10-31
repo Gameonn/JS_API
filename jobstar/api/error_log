@@ -1,0 +1,10 @@
+[03-Sep-2015 09:48:33 America/Chicago] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or '$' in /home3/codebrew/public_html/projects/jobstar/api/DataClass.php on line 630
+[05-Sep-2015 02:10:00 America/Chicago] PHP Fatal error:  Call to undefined function stringify() in /home3/codebrew/public_html/projects/jobstar/api/edit_jobs.php on line 67
+[05-Sep-2015 02:11:23 America/Chicago] PHP Fatal error:  Call to undefined function stringify() in /home3/codebrew/public_html/projects/jobstar/api/edit_jobs.php on line 67
+[05-Sep-2015 02:11:44 America/Chicago] PHP Fatal error:  Call to undefined function stringify() in /home3/codebrew/public_html/projects/jobstar/api/edit_jobs.php on line 67
+[05-Sep-2015 05:13:42 America/Chicago] PHP Fatal error:  Class 'DataClass' not found in /home3/codebrew/public_html/projects/jobstar/api/delete_connection.php on line 41
+[05-Sep-2015 05:32:18 America/Chicago] PHP Fatal error:  Class 'DataClass' not found in /home3/codebrew/public_html/projects/jobstar/api/delete_connection.php on line 41
+[05-Sep-2015 05:33:08 America/Chicago] PHP Fatal error:  Class 'DataClass' not found in /home3/codebrew/public_html/projects/jobstar/api/delete_connection.php on line 41
+[05-Sep-2015 05:34:18 America/Chicago] PHP Fatal error:  Class 'DataClass' not found in /home3/codebrew/public_html/projects/jobstar/api/delete_connection.php on line 41
+[05-Sep-2015 07:09:03 America/Chicago] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home3/codebrew/public_html/projects/jobstar/api/DataClass.php on line 1562
+[05-Sep-2015 07:11:48 America/Chicago] PHP Parse error:  syntax error, unexpected 'l', expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home3/codebrew/public_html/projects/jobstar/api/DataClass.php on line 1301
